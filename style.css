@@ -1,0 +1,189 @@
+/* --- Variables & Core System --- */
+:root {
+    --bg-pearl: #F5F5F7;
+    --card-bg: #FFFFFF;
+    --text-primary: #1D1D1F;
+    --text-secondary: #86868B;
+    --accent-orange: #FF5A36;
+    --accent-green: #00C48C;
+    --border-color: rgba(0, 0, 0, 0.05);
+    --shadow-soft: 0px 10px 30px rgba(0, 0, 0, 0.03);
+    --shadow-hover: 0px 20px 40px rgba(0, 0, 0, 0.08);
+    --radius-lg: 32px;
+    --radius-md: 16px;
+    --radius-pill: 99px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-pearl);
+    color: var(--text-primary);
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- Typography --- */
+h1 { font-size: 4rem; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+h2 { font-size: 2rem; color: var(--text-secondary); font-weight: 500; margin-bottom: 1.5rem; }
+h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 1rem; letter-spacing: -0.01em; }
+p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 1.1rem; }
+
+/* --- Buttons & Links --- */
+a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
+
+.btn-primary {
+    background-color: var(--accent-orange);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border-radius: var(--radius-pill);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 90, 54, 0.3);
+}
+
+/* --- Floating Header --- */
+header {
+    position: fixed;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    max-width: 800px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.nav-container {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 1rem 2rem;
+    border-radius: var(--radius-pill);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-soft);
+}
+
+.logo { font-weight: 700; font-size: 1.2rem; }
+.nav-links { display: flex; list-style: none; gap: 2rem; }
+.nav-links a:hover { color: var(--accent-orange); }
+.mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+/* --- Bento Grid Layout --- */
+.bento-container {
+    max-width: 1200px;
+    margin: 120px auto 40px;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+.bento-item {
+    background: var(--card-bg);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    box-shadow: var(--shadow-soft);
+    border: 1px solid var(--border-color);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.bento-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Span Utilities */
+.hero-span { grid-column: span 12; display: flex; align-items: center; justify-content: space-between; }
+.skills-span { grid-column: span 4; }
+.project-span { grid-column: span 8; display: flex; gap: 2rem; padding: 1.5rem; align-items: center; }
+.experience-span { grid-column: span 12; }
+
+/* --- Components --- */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    background: rgba(0, 196, 140, 0.1);
+    color: var(--accent-green);
+    border-radius: var(--radius-pill);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.dot { width: 8px; height: 8px; background: var(--accent-green); border-radius: 50%; animation: pulse 2s infinite; }
+
+@keyframes pulse {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 196, 140, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 6px rgba(0, 196, 140, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(0, 196, 140, 0); }
+}
+
+.hero-visual img { border-radius: 30%; width: 250px; height: 250px; object-fit: cover; }
+.hero-actions { display: flex; gap: 1rem; align-items: center; }
+.icon-link { font-size: 2rem; color: var(--text-primary); }
+
+.tags-container { display: flex; flex-wrap: wrap; gap: 10px; }
+.tech-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    background: var(--bg-pearl);
+    padding: 6px 12px;
+    border-radius: var(--radius-pill);
+    border: 1px solid var(--border-color);
+}
+.soft-tag { background: #FFF4F1; color: var(--accent-orange); border: none; }
+
+.project-img { width: 40%; height: 250px; border-radius: var(--radius-md); object-fit: cover; }
+.project-info { width: 60%; }
+.project-link { display: inline-flex; align-items: center; gap: 5px; margin-top: 1.5rem; font-weight: 600; color: var(--text-primary); }
+.project-link:hover { color: var(--accent-orange); }
+
+.timeline-item { display: flex; gap: 1.5rem; margin-top: 1.5rem; }
+.timeline-icon { font-size: 2rem; color: var(--accent-orange); }
+.timeline-content h4 { font-size: 1.2rem; }
+.timeline-content .date { font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; color: var(--text-secondary); }
+
+/* --- Footer --- */
+footer { text-align: center; padding: 4rem 2rem; }
+.footer-links { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2rem; }
+.footer-link { font-weight: 500; text-decoration: underline; text-underline-offset: 4px; }
+.footer-link:hover { color: var(--accent-orange); }
+.copyright { font-size: 0.9rem; }
+
+/* --- Animations --- */
+.animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
+
+/* --- Responsive Design --- */
+@media (max-width: 1024px) {
+    .skills-span { grid-column: span 12; }
+    .project-span { grid-column: span 12; }
+    h1 { font-size: 3rem; }
+}
+
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Hide for simple implementation, can be toggled via JS */
+    .mobile-toggle { display: block; }
+    .hero-span { flex-direction: column-reverse; text-align: center; }
+    .hero-actions { justify-content: center; }
+    .project-span { flex-direction: column; }
+    .project-img, .project-info { width: 100%; }
+    .bento-container { gap: 16px; padding: 0 16px; margin-top: 100px; }
+    .bento-item { padding: 2rem; }
+}

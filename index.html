@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jai Verma | Software Engineer</title>
+    
+    <!-- Fonts: Inter and JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Icons: Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Navigation -->
+    <header id="navbar">
+        <nav class="nav-container">
+            <div class="logo">JV.</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+            <a href="cv/cv.pdf" download class="btn-primary" title="Download LaTeX CV">Resume</a>
+            <button class="mobile-toggle"><i class="ph ph-list"></i></button>
+        </nav>
+    </header>
+
+    <main class="bento-container">
+        
+        <!-- Hero Section -->
+        <section id="about" class="bento-item hero-span animate-on-scroll">
+            <div class="hero-content">
+                <div class="status-badge">
+                    <span class="dot"></span> Available for working student roles
+                </div>
+                <h1>Hi, I'm Jai Verma</h1>
+                <h2>Software Engineer</h2>
+                <p>I build structured, scalable applications and break down complex domains into elegant technical solutions. Currently seeking opportunities to contribute to innovative projects.</p>
+                <div class="hero-actions">
+                    <a href="mailto:vermajai335@gmail.com" class="btn-primary">Let's Connect</a>
+                    <a href="https://github.com/yourusername" target="_blank" class="icon-link"><i class="ph ph-github-logo"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img src="https://ui-avatars.com/api/?name=Jai+Verma&size=400&background=FF5A36&color=ffffff&bold=true&rounded=true" alt="Jai Verma Profile" class="profile-img">
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="bento-item skills-span animate-on-scroll">
+            <h3>Technical Stack</h3>
+            <div class="tags-container">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">SQL</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">HTML & CSS</span>
+                <span class="tech-tag">Git / GitHub</span>
+                <span class="tech-tag">LaTeX</span>
+            </div>
+            <h3 style="margin-top: 2rem;">Languages & Soft Skills</h3>
+            <div class="tags-container">
+                <span class="tech-tag soft-tag">German</span>
+                <span class="tech-tag soft-tag">English</span>
+                <span class="tech-tag soft-tag">Concept Tree Learning</span>
+                <span class="tech-tag soft-tag">Problem Solving</span>
+            </div>
+        </section>
+
+        <!-- Project 1: Oceanus -->
+        <article id="projects" class="bento-item project-span animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Project Oceanus Dashboard Mockup" class="project-img">
+            <div class="project-info">
+                <h3>Project Oceanus</h3>
+                <p>A 3-tier web-based game application focused on fleet management. Engineered seamless database connections and dynamic UI interactions.</p>
+                <div class="tags-container">
+                    <span class="tech-tag">PHP</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">JavaScript</span>
+                </div>
+                <a href="https://github.com/yourusername/portfolio/tree/main/exercises/project_oceanus" target="_blank" class="project-link">View Code <i class="ph ph-arrow-up-right"></i></a>
+            </div>
+        </article>
+
+        <!-- Project 2: Lantern Library -->
+        <article class="bento-item project-span animate-on-scroll">
+            <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?auto=format&fit=crop&w=800&q=80" alt="Lantern Library Database Design" class="project-img">
+            <div class="project-info">
+                <h3>Lantern Library</h3>
+                <p>Designed and implemented a relational database architecture for an events booking system, featuring full SQL normalization and ERD modeling.</p>
+                <div class="tags-container">
+                    <span class="tech-tag">SQL</span>
+                    <span class="tech-tag">Database Architecture</span>
+                </div>
+                <a href="https://github.com/yourusername/portfolio/tree/main/exercises/lantern_library" target="_blank" class="project-link">View Code <i class="ph ph-arrow-up-right"></i></a>
+            </div>
+        </article>
+
+        <!-- Experience / Education -->
+        <section id="experience" class="bento-item experience-span animate-on-scroll">
+            <h3>Education</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon"><i class="ph ph-graduation-cap"></i></div>
+                    <div class="timeline-content">
+                        <h4>Bachelor of Computer Science</h4>
+                        <p>GISMA University of Applied Sciences, Berlin</p>
+                        <span class="date">Currently Studying</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="animate-on-scroll">
+        <h2>Let's build something.</h2>
+        <div class="footer-links">
+            <a href="mailto:vermajai335@gmail.com" class="footer-link">vermajai335@gmail.com</a>
+            <a href="tel:017670906622" class="footer-link">017670906622</a>
+            <a href="cv/cv.pdf" download class="footer-link">Download CV (LaTeX)</a>
+        </div>
+        <p class="copyright">© 2026 Jai Verma. Designed for B201 Assessment.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
