@@ -1,0 +1,111 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages for formatting
+\usepackage[margin=0.75in]{geometry} % Clean, modern margins
+\usepackage{titlesec}                % Custom section formatting
+\usepackage{enumitem}                % Better list formatting
+\usepackage{hyperref}                % Clickable links
+\usepackage{xcolor}                  % Color customization
+
+% Color definitions for links
+\definecolor{linkcolor}{RGB}{0, 80, 160}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=linkcolor,
+    filecolor=linkcolor,      
+    urlcolor=linkcolor,
+}
+
+% Customizing section titles
+\titleformat{\section}
+  {\Large\bfseries\uppercase} % Format
+  {}                          % Label
+  {0em}                       % Sep
+  {}                          % Before-code
+  [\vspace{-0.5em}\rule{\textwidth}{0.4pt}] % Horizontal line after
+
+\titlespacing*{\section}{0pt}{1.5ex plus 1ex minus .2ex}{1ex plus .2ex}
+
+% Removing page numbers
+\pagestyle{empty}
+
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {\Huge \textbf{Jai Verma}}\\[0.5em]
+    Invalidenstr. 100, 10115 Berlin, Germany \\
+    \href{mailto:vermajai335@gmail.com}{vermajai335@gmail.com} \,|\, 
+    017670906622 \\[0.5em]
+    \textbf{Portfolio:} \href{https://jaiv5459-gif.github.io/Portfolio/}{jaiv5459-gif.github.io/Portfolio} \,|\,
+    \textbf{GitHub:} \href{https://github.com/jaiv5459-gif}{jaiv5459-gif}
+\end{center}
+\vspace{1em}
+
+% --- CAREER OBJECTIVE ---
+\section*{Career Objective}
+An aspiring Software Engineer actively seeking a working student position. Highly motivated to continuously develop technical skills, apply academic computer science principles to real-world applications, and contribute meaningfully to innovative projects.
+
+% --- EDUCATION ---
+\section*{Education}
+\noindent
+\textbf{Bachelor of Computer Science} \hfill \textit{Currently Studying} \\
+GISMA University of Applied Sciences \hfill Berlin, Germany
+
+% --- TECHNICAL SKILLS ---
+\section*{Technical Skills}
+\begin{itemize}[leftmargin=0.15in, label={--}, itemsep=2pt]
+    \item \textbf{Programming \& Scripting:} Python, JavaScript, PHP, SQL
+    \item \textbf{Web Development:} HTML, CSS, 3-Tier Web Architecture
+    \item \textbf{Databases \& Architecture:} MySQL, Relational Database Design, SQL Normalization
+    \item \textbf{Tools \& Technologies:} Git/GitHub (Version Control), LaTeX (Documentation), WebDrivers (Selenium), VS Code
+    \item \textbf{Operating Systems:} Linux, Windows
+\end{itemize}
+
+% --- ACADEMIC PROJECTS ---
+\section*{Academic Projects}
+
+\noindent
+\textbf{Computer Science Portfolio Website} \hfill \textit{HTML, CSS, JS, LaTeX}
+\begin{itemize}[leftmargin=0.15in, label={--}, itemsep=1pt, topsep=2pt]
+    \item Designed, structured, and deployed a professional computer science portfolio hosted on GitHub Pages utilizing a modern Bento-box UI.
+    \item Maintained a well-documented GitHub repository featuring technical exercises and a LaTeX-generated CV.
+\end{itemize}
+
+\vspace{0.5em}
+\noindent
+\textbf{Project Oceanus: Fleet Management Simulation} \hfill \textit{PHP, MySQL, JavaScript}
+\begin{itemize}[leftmargin=0.15in, label={--}, itemsep=1pt, topsep=2pt]
+    \item Developed a 3-tier web-based game application focused on fleet management.
+    \item Successfully engineered database connections, managed CRUD operations, and designed the front-end layout for seamless user interaction via asynchronous API calls.
+\end{itemize}
+
+\vspace{0.5em}
+\noindent
+\textbf{Lantern Library Database System} \hfill \textit{SQL, Database Architecture}
+\begin{itemize}[leftmargin=0.15in, label={--}, itemsep=1pt, topsep=2pt]
+    \item Designed and implemented a highly normalized (3NF) relational database architecture for a library events booking system.
+    \item Created detailed ERD models and executed complex SQL table scripts to ensure data integrity without redundancy.
+\end{itemize}
+
+% --- GENERAL & SOFT SKILLS ---
+\section*{Soft Skills \& Languages}
+\begin{itemize}[leftmargin=0.15in, label={--}, itemsep=2pt]
+    \item \textbf{Languages:} German, English
+    \item \textbf{Professional Traits:} Analytical Problem Solving, Technical Documentation, Adaptability, Concept Tree Learning (breaking down complex domains into structured hierarchies), Team Collaboration.
+\end{itemize}
+
+% --- PROFESSIONAL EXPERIENCE ---
+\section*{Professional Experience}
+\noindent
+Currently seeking working student opportunities to gain hands-on professional experience in software engineering and systems development.
+
+% --- DECLARATION ---
+\section*{Declaration}
+\noindent
+I hereby declare that the above-mentioned statements are true and correct to the best of my knowledge and belief.\\[2em]
+\noindent
+\textbf{Jai Verma} \\
+\textit{Berlin, Germany}
+
+\end{document}
